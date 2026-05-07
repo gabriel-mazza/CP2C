@@ -33,7 +33,7 @@ namespace ProjectBank.Repositories
             return await _context.Clientes.Include(c => c.Agencia).FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        // AnyAsync não funciona no Oracle — usa CountAsync > 0
+        
         public async Task<bool> ExisteCpfAsync(string cpf)
         {
             return await _context.PessoasFisicas.CountAsync(pf => pf.Cpf == cpf) > 0;

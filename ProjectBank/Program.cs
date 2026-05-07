@@ -6,11 +6,10 @@ using ProjectBank.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Dev 1
+
 builder.Services.AddScoped<IAgenciaRepository, AgenciaRepository>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
-// Dev 2
 builder.Services.AddScoped<IMdrService, MdrService>();
 
 builder.Services.AddControllers();

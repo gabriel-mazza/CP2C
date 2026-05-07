@@ -20,7 +20,7 @@ namespace ProjectBank.Controllers
             _mdrService = mdrService;
         }
 
-        // POST /api/contratacoes
+    
         [HttpPost]
         public async Task<IActionResult> Solicitar([FromBody] ContratacaoRequestDTO dto)
         {
@@ -43,7 +43,7 @@ namespace ProjectBank.Controllers
                 Status = StatusContratacao.Aprovada
             };
 
-            // Regra MDR variável — requisito de dupla
+
             if (produto is MaquinaDeCartao maquina)
             {
                 contratacao.TaxaMdrEfetiva = _mdrService.CalcularTaxaEfetiva(maquina, cliente);
@@ -63,7 +63,6 @@ namespace ProjectBank.Controllers
                 MapToResponse(contratacao));
         }
 
-        // GET /api/contratacoes/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> BuscarPorId(int id)
         {

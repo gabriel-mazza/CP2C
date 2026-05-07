@@ -26,7 +26,7 @@ namespace ProjectBank.Repositories
             return await _context.Agencias.FirstOrDefaultAsync(a => a.Id == id);
         }
 
-        // AnyAsync não funciona no Oracle — usa CountAsync > 0
+       
         public async Task<bool> ExisteAgenciaAsync(int id)
         {
             return await _context.Agencias.CountAsync(a => a.Id == id) > 0;

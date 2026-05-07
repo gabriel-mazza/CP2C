@@ -2,9 +2,7 @@ using ProjectBank.Models;
 
 namespace ProjectBank.Services
 {
-    // Regra de negócio extra (requisito de dupla):
-    // PJ recebe 30% de desconto na taxa MDR
-    // PF paga a taxa cheia
+   
     public interface IMdrService
     {
         decimal CalcularTaxaEfetiva(MaquinaDeCartao maquina, Cliente cliente);

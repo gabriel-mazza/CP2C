@@ -17,7 +17,6 @@ namespace ProjectBank.Controllers
             _context = context;
         }
 
-        // POST /api/produtos
         [HttpPost]
         public async Task<IActionResult> Criar([FromBody] MaquinaDeCartaoRequestDTO dto)
         {
@@ -44,7 +43,6 @@ namespace ProjectBank.Controllers
                 });
         }
 
-        // GET /api/produtos/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> BuscarPorId(int id)
         {

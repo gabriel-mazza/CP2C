@@ -8,7 +8,7 @@ namespace ProjectBank.Models
         public int AgenciaId { get; set; }
         public Agencia Agencia { get; set; } = null!;
 
-        // Adicionado para ligar com Contratacoes (Dev 2)
+       
         public ICollection<Contratacao> Contratacoes { get; set; } = new List<Contratacao>();
     }
 }

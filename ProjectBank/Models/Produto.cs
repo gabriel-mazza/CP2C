@@ -5,7 +5,7 @@ namespace ProjectBank.Models
         public int Id { get; set; }
         public required string Nome { get; set; }
         public string Descricao { get; set; } = string.Empty;
-        public int Ativo { get; set; } = 1; // Oracle não aceita bool — usa 1/0
+        public int Ativo { get; set; } = 1; 
 
         public ICollection<Contratacao> Contratacoes { get; set; } = new List<Contratacao>();
     }

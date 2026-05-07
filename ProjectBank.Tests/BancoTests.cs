@@ -21,7 +21,7 @@ namespace ProjectBank.Tests
             return new BancoDbContext(options);
         }
 
-        // ── CPF duplicado ────────────────────────────────────
+        
         [Fact]
         public async Task ExisteCpf_DeveRetornarTrue_QuandoCpfJaCadastrado()
         {
@@ -41,7 +41,6 @@ namespace ProjectBank.Tests
             existe.Should().BeTrue();
         }
 
-        // ── CNPJ duplicado ───────────────────────────────────
         [Fact]
         public async Task ExisteCnpj_DeveRetornarTrue_QuandoCnpjJaCadastrado()
         {
@@ -61,7 +60,6 @@ namespace ProjectBank.Tests
             existe.Should().BeTrue();
         }
 
-        // ── Agência inexistente ──────────────────────────────
         [Fact]
         public async Task ExisteAgencia_DeveRetornarFalse_QuandoAgenciaNaoExiste()
         {
@@ -73,7 +71,6 @@ namespace ProjectBank.Tests
             existe.Should().BeFalse();
         }
 
-        // ── Contratação válida ───────────────────────────────
         [Fact]
         public void MDR_PF_DevePagarTaxaCheia()
         {
@@ -115,7 +112,7 @@ namespace ProjectBank.Tests
             result.Should().BeOfType<NotFoundObjectResult>();
         }
 
-        // ── Contratação PJ com desconto ──────────────────────
+     
         [Fact]
         public void MDR_PJ_DeveReceberDesconto30Porcento()
         {
