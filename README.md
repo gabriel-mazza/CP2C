@@ -6,7 +6,8 @@ A Máquina de Cartão foi escolhida por ser o produto bancário mais presente no
 
 Diagrama de Classes
 
-(print)
+<img width="857" height="1600" alt="image" src="https://github.com/user-attachments/assets/5b53b9f6-c515-4037-846e-b9b356011806" />
+
 
 Endpoints Disponíveis
 
